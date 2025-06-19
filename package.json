@@ -1,0 +1,12 @@
+{
+  "name": "apollo-people-scraper",
+  "version": "1.0.0",
+  "description": "Apollo.io scraper: Payroll officers and random roles, filtered by location, company size, and email quality.",
+  "dependencies": {
+    "apify": "^3.0.0",
+    "puppeteer": "^21.3.0"
+  },
+  "scripts": {
+    "start": "node main.js"
+  }
+}

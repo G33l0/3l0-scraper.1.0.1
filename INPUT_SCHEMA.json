@@ -1,0 +1,30 @@
+{
+  "title": "Apollo Scraper Input",
+  "type": "object",
+  "schemaVersion": 1,
+  "properties": {
+    "country": {
+      "title": "Country",
+      "type": "string"
+    },
+    "region": {
+      "title": "Region or State",
+      "type": "string"
+    },
+    "companySizes": {
+      "title": "Company Size Ranges",
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": ["1-10", "11-50", "51-200", "201-500", "501-1000", "1001-5000", "5001-10000", "10000+"]
+      },
+      "default": ["11-50", "51-200"]
+    },
+    "onlyValidEmails": {
+      "title": "Only include verified emails (no catch-all)",
+      "type": "boolean",
+      "default": true
+    }
+  },
+  "required": ["country"]
+}
