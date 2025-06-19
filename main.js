@@ -17,7 +17,9 @@ const companySizes = companySizesRaw.split(',').map(s => s.trim());
         groups: ['RESIDENTIAL'],
     });
 
-    const browser = await Actor.launchPuppeteer({
+const { Actor } = require('apify');
+
+const browser = await Actor.launchPuppeteer({
     headless: true,
     useChrome: true,
     proxyUrl: (await proxyConfiguration.newProxyInfo()).url
