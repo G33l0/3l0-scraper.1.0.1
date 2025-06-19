@@ -1,11 +1,12 @@
 {
-  "name": "apollo-people-scraper",
+  "name": "apollo-scraper",
   "version": "1.0.0",
-  "description": "Apollo.io scraper: Payroll officers and random roles, filtered by location, company size, and email quality.",
-"dependencies": {
-  "apify": "^3.6.0"
-},
+  "description": "Scrapes Payroll Officers and random employees from Apollo.io",
+  "main": "main.js",
   "scripts": {
     "start": "node main.js"
+  },
+  "dependencies": {
+    "apify": "^3.6.0"
   }
 }
