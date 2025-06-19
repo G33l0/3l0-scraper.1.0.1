@@ -1,5 +1,4 @@
 const { Actor, log, ProxyConfiguration, KeyValueStore } = require('apify');
-const puppeteer = require('puppeteer');
 const { loadCookies } = require('./utils');
 
 Actor.main(async () => {
