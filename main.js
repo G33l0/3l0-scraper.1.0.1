@@ -5,11 +5,13 @@ const { loadCookies } = require('./utils');
 Actor.main(async () => {
     const input = await Actor.getInput();
     const {
-        country,
-        region,
-        companySizes = ['11-50', '51-200'],
-        onlyValidEmails = true
-    } = input;
+    country,
+    region,
+    companySizes: companySizesRaw = '11-50,51-200',
+    onlyValidEmails = true
+} = input;
+
+const companySizes = companySizesRaw.split(',').map(s => s.trim());
 
     const proxyConfiguration = await Actor.createProxyConfiguration({
         groups: ['RESIDENTIAL'],
