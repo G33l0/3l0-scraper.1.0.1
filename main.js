@@ -17,13 +17,13 @@ const companySizes = companySizesRaw.split(',').map(s => s.trim());
         groups: ['RESIDENTIAL'],
     });
 
-    const browser = await puppeteer.launch({
-        headless: true,
-        args: ['--no-sandbox'],
-    });
+    const browser = await Actor.launchPuppeteer({
+    headless: true,
+    useChrome: true,
+    proxyUrl: (await proxyConfiguration.newProxyInfo()).url
+});
 
     const page = await browser.newPage();
-    await Actor.utils.puppeteer.setProxyToPage(page, proxyConfiguration);
 
     await loadCookies(page);
     await page.goto('https://app.apollo.io/#/dashboard', { waitUntil: 'networkidle2' });
