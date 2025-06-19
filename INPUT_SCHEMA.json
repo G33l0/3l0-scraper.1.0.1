@@ -5,20 +5,19 @@
   "properties": {
     "country": {
       "title": "Country",
-      "type": "string",
       "editor": "textfield",
+      "type": "string",
       "default": "United States",
       "description": "Enter the country to target for scraping employees. Default is United States."
     },
     "region": {
       "title": "State or Region",
-      "type": "string",
       "editor": "textfield",
+      "type": "string",
       "description": "Optional. Enter a specific state or region within the selected country."
     },
     "companySizes": {
       "title": "Company Size Ranges",
-      "type": "array",
       "editor": "multiselect",
       "enum": [
         "1-10",
