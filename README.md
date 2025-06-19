@@ -1,4 +1,4 @@
-# # Apolo 3l0-scraper.1.0.1
+# # Apollo 3l0-scraper.1.0.1
 
 ### ✅ Features
 - Scrapes **Payroll Officer** and one **random non-manager employee**
