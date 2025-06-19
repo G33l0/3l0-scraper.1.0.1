@@ -4,33 +4,33 @@ const { loadCookies } = require('./utils');
 Actor.main(async () => {
     const input = await Actor.getInput();
     const {
-    country,
-    region,
-    companySizes: companySizesRaw = '11-50,51-200',
-    onlyValidEmails = true
-} = input;
+        country,
+        region,
+        companySizes: companySizesRaw = '11-50,51-200',
+        onlyValidEmails = true
+    } = input;
 
-const companySizes = companySizesRaw.split(',').map(s => s.trim());
+    const companySizes = companySizesRaw.split(',').map(s => s.trim());
 
     const proxyConfiguration = await Actor.createProxyConfiguration({
         groups: ['RESIDENTIAL'],
     });
 
-const { Actor } = require('apify');
-
-const browser = await Actor.launchPuppeteer({
-    headless: true,
-    useChrome: true,
-    proxyUrl: (await proxyConfiguration.newProxyInfo()).url
-});
+    const browser = await Actor.launchPuppeteer({
+        headless: true,
+        useChrome: true,
+        proxyUrl: (await proxyConfiguration.newProxyInfo()).url
+    });
 
     const page = await browser.newPage();
 
     await loadCookies(page);
     await page.goto('https://app.apollo.io/#/dashboard', { waitUntil: 'networkidle2' });
+
     if (page.url().includes('/login')) {
         log.info('🔑 Please log in to Apollo.io manually within 60 seconds...');
         await page.waitForTimeout(60000);
+
         const cookies = await page.cookies();
         const store = await KeyValueStore.open('COOKIE_STORE');
         await store.setValue('APOLLO_COOKIES', cookies);
