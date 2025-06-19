@@ -6,6 +6,16 @@
 - Only includes **valid emails** (excludes catch-all)
 - Uses **proxy rotation** and auto-login saving
 - Outputs in flat format with clear separators:
+        Ada Johnson
+        ada.johnson@finasoft.com
+        Yemi Balogun
+        Electrician
+=============================================
+        Michael Ray
+        michael.ray@zentech.com
+        Anita Kwame
+        Sales Adviser
+=============================================
 
 ## License
 
