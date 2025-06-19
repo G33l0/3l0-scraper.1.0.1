@@ -5,25 +5,33 @@
   "properties": {
     "country": {
       "title": "Country",
-      "type": "string"
+      "type": "string",
+      "description": "Enter the country to target for scraping employees."
     },
     "region": {
       "title": "Region or State",
-      "type": "string"
+      "type": "string",
+      "description": "Optional. Filter results by a specific state or region."
     },
     "companySizes": {
       "title": "Company Size Ranges",
       "type": "array",
       "items": {
         "type": "string",
-        "enum": ["1-10", "11-50", "51-200", "201-500", "501-1000", "1001-5000", "5001-10000", "10000+"]
+        "enum": [
+          "1-10", "11-50", "51-200",
+          "201-500", "501-1000", "1001-5000",
+          "5001-10000", "10000+"
+        ]
       },
-      "default": ["11-50", "51-200"]
+      "default": ["11-50", "51-200"],
+      "description": "Select one or more company size ranges to filter results."
     },
     "onlyValidEmails": {
       "title": "Only include verified emails (no catch-all)",
       "type": "boolean",
-      "default": true
+      "default": true,
+      "description": "Enable this to exclude catch-all or unverified emails."
     }
   },
   "required": ["country"]
