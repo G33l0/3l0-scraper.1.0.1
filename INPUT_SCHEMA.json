@@ -5,21 +5,21 @@
   "properties": {
     "country": {
       "title": "Country",
-      "editor": "textfield",
       "type": "string",
+      "editor": "textfield",
       "default": "United States",
       "description": "Enter the country to target for scraping employees. Default is United States."
     },
     "region": {
       "title": "State or Region",
-      "editor": "textfield",
       "type": "string",
+      "editor": "textfield",
       "description": "Optional. Enter a specific state or region within the selected country."
     },
     "companySizes": {
       "title": "Company Size Ranges",
       "editor": "multiselect",
-      "type": "array",
+      "type": "string",
       "enum": [
         "1-10",
         "11-50",
@@ -30,8 +30,8 @@
         "5001-10000",
         "10000+"
       ],
-      "default": ["11-50", "51-200"],
-      "description": "Select one or more company size ranges to filter results."
+      "default": "11-50",
+      "description": "Select a company size range. You can choose multiple after running with input UI."
     },
     "onlyValidEmails": {
       "title": "Only include verified emails (no catch-all)",
