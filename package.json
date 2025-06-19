@@ -4,7 +4,7 @@
   "description": "Apollo.io scraper: Payroll officers and random roles, filtered by location, company size, and email quality.",
 "dependencies": {
   "apify": "^3.6.0"
-}
+},
   "scripts": {
     "start": "node main.js"
   }
