@@ -8,14 +8,23 @@
 - Outputs in flat format with clear separators:
 
 Ada Johnson
+
 ada.johnson@finasoft.com
+
 Yemi Balogun
+
 HR Assistant
+
 =====================================
+
 Michael Ray
+
 michael.ray@zentech.com
+
 Anita Kwame
+
 Recruiter
+
 ======================================
 
 ## License
